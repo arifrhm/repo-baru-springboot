@@ -38,13 +38,13 @@ public class Karyawan extends AbstractDate implements Serializable {
     @Column(name = "status", nullable = false, length = 50)
     private String status;
 
-    @JsonIgnore
-    @OneToMany(targetEntity = Rekening.class, cascade = CascadeType.MERGE)
-    private List<Rekening> rekening;
+//    @JsonIgnore
+//    @OneToMany(targetEntity = Rekening.class, cascade = CascadeType.MERGE)
+//    private List<Rekening> rekening;
 
-    @JsonIgnore
-    @OneToMany(targetEntity = KaryawanTraining.class, cascade = CascadeType.MERGE)
-    private List<KaryawanTraining> karyawanTraining;
+//    @JsonIgnore
+//    @OneToMany(targetEntity = KaryawanTraining.class, cascade = CascadeType.MERGE)
+//    private List<KaryawanTraining> karyawanTraining;
 
 
 }

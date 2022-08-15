@@ -83,7 +83,7 @@ public class KaryawanJunitRestTemplateMybatis {
         HttpHeaders headers = new HttpHeaders();
         headers.set("Accept", "*/*");
         headers.set("Content-Type", "application/json");
-        long id = 2L;
+        long id = 1L;
         ResponseEntity<String> exchange = restTemplate.exchange("http://localhost:9098/api/v1/sp/karyawan/"+id, HttpMethod.GET, null, String.class);
         System.out.println("response  =" + exchange.getBody());
         assertEquals(HttpStatus.OK, exchange.getStatusCode());

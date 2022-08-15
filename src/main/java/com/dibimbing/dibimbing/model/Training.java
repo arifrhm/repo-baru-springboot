@@ -25,6 +25,6 @@ public class Training extends AbstractDate implements Serializable {
     @Column(name = "pengajar")
     private String pengajar;
 
-    @OneToMany(mappedBy = "training")
-    private List<KaryawanTraining> karyawanTrainingList;
+//    @OneToMany(mappedBy = "training")
+//    private List<KaryawanTraining> karyawanTrainingList;
 }
