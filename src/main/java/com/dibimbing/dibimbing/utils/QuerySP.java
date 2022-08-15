@@ -90,7 +90,7 @@ public class QuerySP {
             "$function$\n" +
             ";";
 
-    public String getlistkaryawan = "CREATE OR REPLACE FUNCTION public.getlistkaryawan(rqnama character varying)\n" +
+    public String getlistkaryawanbynama = "CREATE OR REPLACE FUNCTION public.getlistkaryawanbynama(rqnama character varying)\n" +
             " RETURNS TABLE(" +
             "resid bigint, " +
             "resnama character varying, " +

@@ -10,6 +10,8 @@ public interface TrainingService {
     public Map update(Training training);
     public Map findByTema(String tema, Integer page, Integer size);
     public Map findByPengajar(String pengajar, Integer page, Integer size);
+
+    public Map getByID(Long idTraining);
     public Map getAll(int size, int page);
 
 }

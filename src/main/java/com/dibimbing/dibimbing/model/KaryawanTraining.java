@@ -22,11 +22,11 @@ public class KaryawanTraining extends AbstractDate implements Serializable {
     @Column(name = "training_date")
     private Date training_date;
 
-    @ManyToOne
+    @ManyToOne(targetEntity = Karyawan.class, cascade = CascadeType.MERGE)
     @JoinColumn(name = "karyawan_id", referencedColumnName = "id")
     private Karyawan karyawan;
 
-    @ManyToOne
+    @ManyToOne(targetEntity = Training.class, cascade = CascadeType.MERGE)
     @JoinColumn(name = "training_id", referencedColumnName = "id")
     private Training training;
 }

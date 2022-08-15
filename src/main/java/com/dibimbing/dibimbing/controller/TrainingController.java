@@ -44,4 +44,11 @@ public class TrainingController {
         Map list = trainingService.getAll(size, page);
         return new ResponseEntity<Map>(list, new HttpHeaders(), HttpStatus.OK);
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Map>listKaryawanTraining(@PathVariable(value = "id")Long id){
+        Map training = trainingService.getByID(id);
+        return new ResponseEntity<Map>(training, new HttpHeaders(), HttpStatus.OK);
+
+    }
 }

@@ -38,7 +38,7 @@ public interface KaryawanRepoMybatis {
     @Select("select resid, resnama, resjk, resdob, resalamat, resstatus FROM getkaryawan(#{rqid});")
     KaryawanMybatis selectBlog(Long rqid);
 
-    @Select("select resid, resnama, resjk, resdob, resalamat, resstatus FROM getlistkaryawan(#{rqnama});")
+    @Select("select resid, resnama, resjk, resdob, resalamat, resstatus FROM getlistkaryawanbynama(#{rqnama});")
         List<KaryawanMybatis> selectList(String rqnama);
 
     @Delete("call deletekaryawan (" +

@@ -1,5 +1,6 @@
 package com.dibimbing.dibimbing.service.impl;
 
+import com.dibimbing.dibimbing.model.KaryawanTraining;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -101,6 +102,17 @@ public class TrainingServiceImpl implements TrainingService {
             return templateResponse.templateSukses(list);
         } catch (Exception e) {
             log.error("ada eror di method getAll:" + e);
+            return templateResponse.templateEror(e);
+        }
+    }
+
+    @Override
+    public Map getByID(Long id) {
+        try {
+            Training trainingById = trainingRepository.getbyID(id);
+            return templateResponse.templateSukses(trainingById);
+        } catch (Exception e) {
+            log.error("ada error di method getAll:" + e);
             return templateResponse.templateEror(e);
         }
     }

@@ -31,7 +31,7 @@ public class KaryawanJunitRestTemplateMybatis {
         jdbcTemplate.execute(querySP.save);
         jdbcTemplate.execute(querySP.updatekaryawan);
         jdbcTemplate.execute(querySP.getkaryawan);
-        jdbcTemplate.execute(querySP.getlistkaryawan);
+        jdbcTemplate.execute(querySP.getlistkaryawanbynama);
         jdbcTemplate.execute(querySP.deletekaryawan);
     }
 
@@ -94,7 +94,7 @@ public class KaryawanJunitRestTemplateMybatis {
         headers.set("Accept", "*/*");
         headers.set("Content-Type", "application/json");
 
-        ResponseEntity<String> exchange = restTemplate.exchange("http://localhost:9098/api/v1/sp/karyawan/list?nama=Indah", HttpMethod.GET, null, String.class);
+        ResponseEntity<String> exchange = restTemplate.exchange("http://localhost:9098/api/v1/sp/karyawan/list?nama=ar", HttpMethod.GET, null, String.class);
         System.out.println("response  =" + exchange.getBody());
         assertEquals(HttpStatus.OK, exchange.getStatusCode());
     }
