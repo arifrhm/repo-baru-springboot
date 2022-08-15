@@ -2,7 +2,6 @@ package com.dibimbing.dibimbing.model;
 
 import lombok.Data;
 import org.hibernate.annotations.Where;
-import org.springframework.data.relational.core.mapping.Table;
 
 import javax.persistence.*;
 import java.io.Serializable;

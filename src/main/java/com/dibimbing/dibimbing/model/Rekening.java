@@ -3,7 +3,6 @@ package com.dibimbing.dibimbing.model;
 import lombok.Data;
 import net.minidev.json.annotate.JsonIgnore;
 import org.hibernate.annotations.Where;
-import org.springframework.data.relational.core.mapping.Table;
 
 import javax.persistence.*;
 import java.io.Serializable;
