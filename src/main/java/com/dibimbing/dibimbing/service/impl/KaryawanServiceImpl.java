@@ -1,5 +1,6 @@
 package com.dibimbing.dibimbing.service.impl;
 
+import com.dibimbing.dibimbing.model.KaryawanTraining;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -102,18 +103,14 @@ public class KaryawanServiceImpl implements KaryawanService {
     }
 
     @Override
-    public Map getbyIDKaryawan(Long karyawan,Integer page, Integer size) {
-//        try {
-//            Pageable show_data = PageRequest.of(page, size);
-//            Page<Karyawan> list = karyawanRepository.getbyIDKaryawan(karyawan);
-//            return templateResponse.templateSukses(list);
-//        } catch (Exception e) {
-//
-//            log.error("eror disini findByNama : " + e);
-//            //menampilkan responose
-//            return templateResponse.templateEror(e);
-//        }
-        return null;
+    public Map getbyIDKaryawan(Long karyawanID) {
+        try {
+            Karyawan karyawanById = karyawanRepository.getbyIDKaryawan(karyawanID);
+            return templateResponse.templateSukses(karyawanById);
+        } catch (Exception e) {
+            log.error("ada error di method getAll:" + e);
+            return templateResponse.templateEror(e);
+        }
     }
 
     @Override

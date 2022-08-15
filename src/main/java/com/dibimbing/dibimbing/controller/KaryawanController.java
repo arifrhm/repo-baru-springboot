@@ -57,4 +57,11 @@ public class KaryawanController {
 
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Map>karyawanByID(@PathVariable(value = "id")Long id){
+        Map dataKaryawan = karyawanService.getbyIDKaryawan(id);
+        return new ResponseEntity<Map>(dataKaryawan, new HttpHeaders(), HttpStatus.OK);
+
+    }
+
 }
