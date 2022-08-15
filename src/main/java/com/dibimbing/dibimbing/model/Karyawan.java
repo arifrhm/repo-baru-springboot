@@ -5,6 +5,7 @@ import lombok.Data;
 import net.minidev.json.annotate.JsonIgnore;
 import org.hibernate.annotations.Where;
 import org.springframework.data.relational.core.mapping.Table;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -28,6 +29,7 @@ public class Karyawan extends AbstractDate implements Serializable {
     @Column(name = "jk", nullable = false, length = 45)
     private String jk;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "dob", nullable = false)
     private Date dob;
 
